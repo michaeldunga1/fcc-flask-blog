@@ -5,7 +5,7 @@ Jinja2 templates with a shared layout (`base.html`), home and about pages, and o
 ## Run
 
 ```bash
-cd projects/flask-blog/02-Templates
+cd 02-Templates
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

@@ -5,7 +5,7 @@ Flask-Login with register, login, logout, `@login_required` for publishing, and 
 ## Run
 
 ```bash
-cd projects/flask-blog/05-Auth
+cd 05-Auth
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

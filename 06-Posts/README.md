@@ -5,7 +5,7 @@ Full CRUD for posts: create, view detail, edit, and delete. Only the post owner 
 ## Run
 
 ```bash
-cd projects/flask-blog/06-Posts
+cd 06-Posts
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

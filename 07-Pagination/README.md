@@ -5,7 +5,7 @@ Home feed uses SQLAlchemy pagination (5 posts per page) with Previous/Next links
 ## Run
 
 ```bash
-cd projects/flask-blog/07-Pagination
+cd 07-Pagination
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

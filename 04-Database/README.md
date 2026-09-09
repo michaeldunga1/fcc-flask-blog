@@ -5,7 +5,7 @@ SQLite + Flask-SQLAlchemy with `User` and `Post` models. Tables are created on s
 ## Run
 
 ```bash
-cd projects/flask-blog/04-Database
+cd 04-Database
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

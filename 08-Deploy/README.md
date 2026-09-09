@@ -5,7 +5,7 @@ Production-minded Campus Wire: `SECRET_KEY` and optional `DATABASE_URL` from the
 ## Run locally
 
 ```bash
-cd projects/flask-blog/08-Deploy
+cd 08-Deploy
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

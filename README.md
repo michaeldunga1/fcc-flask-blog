@@ -20,7 +20,8 @@ Original step-by-step Flask blog for [Free Computer Courses](https://freecompute
 From the **snapshot folder** you want to try:
 
 ```bash
-cd projects/flask-blog/01-Getting-Started   # or 02-Templates, etc.
+git clone https://github.com/michaeldunga1/fcc-flask-blog.git
+cd fcc-flask-blog/01-Getting-Started   # or 02-Templates, etc.
 python3 -m venv .venv
 source .venv/bin/activate                   # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt

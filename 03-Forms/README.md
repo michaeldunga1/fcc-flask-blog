@@ -5,7 +5,7 @@ Flask-WTF `PostForm` with title and content fields, validators, and flash messag
 ## Run
 
 ```bash
-cd projects/flask-blog/03-Forms
+cd 03-Forms
 python3 -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r ../requirements.txt
