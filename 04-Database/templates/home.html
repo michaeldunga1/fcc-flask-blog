@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1 class="mb-4">Latest posts</h1>
+  {% for post in posts %}
+    <article class="mb-4">
+      <h2 class="h4">{{ post.title }}</h2>
+      <p class="text-muted small">
+        by {{ post.author.username }} · {{ post.created_at.strftime("%Y-%m-%d %H:%M") }}
+      </p>
+      <p>{{ post.content }}</p>
+    </article>
+  {% else %}
+    <p>No posts in the database yet.</p>
+  {% endfor %}
+{% endblock %}

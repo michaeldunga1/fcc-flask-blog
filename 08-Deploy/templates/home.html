@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block content %}
+  <h1 class="mb-4">Latest posts</h1>
+  {% for post in posts %}
+    <article class="mb-4">
+      <h2 class="h4">
+        <a href="{{ url_for('post_detail', post_id=post.id) }}">{{ post.title }}</a>
+      </h2>
+      <p class="text-muted small">
+        by {{ post.author.username }} · {{ post.created_at.strftime("%Y-%m-%d %H:%M") }}
+      </p>
+      <p>{{ post.content[:160] }}{% if post.content|length > 160 %}…{% endif %}</p>
+    </article>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endfor %}
+
+  {% if pagination and pagination.pages > 1 %}
+    <nav aria-label="Post pages">
+      <ul class="pagination">
+        <li class="page-item {% if not pagination.has_prev %}disabled{% endif %}">
+          <a class="page-link" href="{{ url_for('home', page=pagination.prev_num) }}">Previous</a>
+        </li>
+        {% for page_num in pagination.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+          {% if page_num %}
+            <li class="page-item {% if page_num == pagination.page %}active{% endif %}">
+              <a class="page-link" href="{{ url_for('home', page=page_num) }}">{{ page_num }}</a>
+            </li>
+          {% else %}
+            <li class="page-item disabled"><span class="page-link">…</span></li>
+          {% endif %}
+        {% endfor %}
+        <li class="page-item {% if not pagination.has_next %}disabled{% endif %}">
+          <a class="page-link" href="{{ url_for('home', page=pagination.next_num) }}">Next</a>
+        </li>
+      </ul>
+    </nav>
+  {% endif %}
+{% endblock %}

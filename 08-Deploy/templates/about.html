@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+  <h1>About deploying Campus Wire</h1>
+  <p>
+    This snapshot reads <code>SECRET_KEY</code> and optional
+    <code>DATABASE_URL</code> from the environment so you can deploy without
+    shipping secrets in source control.
+  </p>
+{% endblock %}

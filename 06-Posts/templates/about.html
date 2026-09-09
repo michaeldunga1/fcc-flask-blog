@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+  <h1>About posts CRUD</h1>
+  <p>
+    Authors can create, read, update, and delete only their own posts.
+    Other users receive a 403 if they try to edit someone else's writing.
+  </p>
+{% endblock %}

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block content %}
+  <h1>About authentication</h1>
+  <p>
+    Flask-Login tracks the current user in the session. Passwords are stored as
+    hashes with Werkzeug — never as plain text.
+  </p>
+{% endblock %}
